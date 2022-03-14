@@ -1,0 +1,697 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans";
+}
+
+html, body{
+    height: 100%;
+}
+
+/* fonts */
+
+    @font-face {
+        font-family: "Open Sans";
+        src: url("../fonts/OpenSans/static/OpenSans/OpenSans-Light.ttf") format("truetype");
+        font-weight: 100; /** lighter **/
+        font-style: normal;
+    }
+    
+    @font-face {
+        font-family: "Open Sans";
+        src: url("../fonts/OpenSans/static/OpenSans/OpenSans-LightItalic.ttf") format("truetype");
+        font-weight: 100; /** normal **/
+        font-style: italic;
+    }
+
+    @font-face {
+        font-family: "Open Sans";
+        src: url("../fonts/OpenSans/static/OpenSans/OpenSans-Regular.ttf") format("truetype");
+        font-weight: 400; /** normal **/
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: "Open Sans";
+        src: url("../fonts/OpenSans/static/OpenSans/OpenSans-Bold.ttf") format("truetype");
+        font-weight: 700; /** bold **/
+        font-style: normal;
+    }
+
+/*-------------*/
+
+/* general divs */
+
+.container{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.clear{
+    clear: both;
+}
+
+/*-------------*/
+
+/* header */
+
+header{
+    width: 100%;
+    height: 90vh;
+    min-height: 700px;
+    background-size: cover;
+    padding: 20px 2%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../images/header_bg.png");
+}
+
+header .container .logo{
+    width: 120px;
+    height: 40px;
+    float: left;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../images/logo-danki.png");
+}
+
+header .container nav{
+    float: right;
+}
+
+header .container nav.dektop-menu ul{
+    list-style-type: none;
+    list-style-position: inside;
+}
+
+header .container nav.dektop-menu ul li{
+    display: inline-block;
+    margin: 10px 15px;
+}
+
+header .container nav.dektop-menu ul li a{
+    color: white;
+    text-decoration: none;
+}
+
+header .container nav.dektop-menu ul li:nth-child(1) a{
+    font-weight: bold;
+}
+
+header .container nav.mobile-menu{
+    display: none;
+    width: 32px;
+    height: 32px;
+    background-image: url("../images/icons/icons8-menu-rounded-96.png");
+    background-size: 100% 100%;
+    cursor: pointer;
+}
+
+header .container .header-text{
+    max-width: 600px;
+    float: right;
+    margin: 200px 50px;
+}
+
+header .container .header-text *{
+    color: white;
+    font-weight: lighter;
+}
+
+header .container .header-text h2{
+    font-size: 40px;
+}
+
+header .container .header-text p{
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+@media screen and (max-width: 992px){
+
+    header{
+        height: auto;
+    }
+
+    header .container{
+        text-align: center;
+    }
+
+    header .container .header-text{
+        float: none;
+        margin: 200px auto;
+    }
+
+}
+
+@media screen and (max-width: 768px){
+
+    header .container nav.dektop-menu{
+        display: none;
+    }
+
+    header .container nav.mobile-menu{
+        display: block;
+    }
+
+    header .container nav.mobile-menu ul{
+        opacity: 0;
+        transition: 1s;
+        background-color: white;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        color: white;
+        list-style-type: none;
+    }
+    
+    header .container nav.mobile-menu:hover ul{
+        opacity: 1;
+    }
+    
+    header .container nav.mobile-menu li{
+        border-bottom: 1px solid black;
+        padding: 8px 0;
+        transition: 0.4s;
+    }
+    
+    header .container nav.mobile-menu ul li:hover{
+        background-color: rgb(230, 230, 230);
+    }
+    
+    header .container nav.mobile-menu ul li a{
+        color: black;
+        text-decoration: none;
+    }
+
+    @media screen and (max-width: 600px){
+        header{
+            height: 500px;
+        }
+    }
+}
+
+/*-------------*/
+
+/* section.development */
+
+section.development{
+    width: 100%;
+    background-color: #452460;
+    padding: 0 2%;
+    height: 400px;
+}
+
+section.development .container .development-text{
+    float: left;
+    position: relative;
+    left: 15%;
+    width: 50%;
+    margin-top: 50px;
+    padding-left: 50px;
+}
+
+section.development .container .development-text *{
+    color: white;
+}
+
+section.development .container .development-text h2{
+    font-weight: lighter;
+    font-size: 26px;
+}
+
+section.development .container .development-text p{
+    margin-top: 20px;
+    font-size: 15px;
+}
+
+section.development .container .development-text ul{
+    list-style-position: inside;
+    margin-top: 25px;
+}
+
+section.development .container .development-text ul li{
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+section.development .container .development-text button{
+    display: inline-block;
+    font-weight: bold;
+    background-color: #FF703D;
+    width: 165px;
+    height: 50px;
+    margin-top: 25px;
+    cursor: pointer;
+    border: none;
+    border-radius: 30px;
+    line-height: 44px;
+}
+
+section.development .development-devices{
+    float: left;
+    width: 50%;
+    height: 430px;
+    position: relative;
+    top: -30px;
+    left: -5%;
+    background-image: url("../images/device.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+@media screen and (max-width: 992px){
+
+    section.development .container .development-text{
+        left: 0;
+        width: 40%;
+        margin-top: 25px;
+        padding-left: 50px;
+    }
+
+    section.development .development-devices{
+        width: 60%;
+        left: 0;
+    }
+
+}
+
+@media screen and (max-width: 768px){
+
+    section.development{
+        padding: 40px 2%;
+        height: auto;
+        text-align: center;
+    }
+
+    section.development .container .development-text{
+        margin-top: 0;
+        padding-left: 0;
+        position: static;
+        float: none;
+        display: inline-block;
+        width: 100%;
+    }
+
+    section.development .container .development-devices{
+        display: none;
+    }
+
+    section.development .container .development-text ul{
+        display: inline-block;
+        list-style-type: none;
+    }
+
+    section.development .container .development-text ul li{
+        text-align: left;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+}
+
+/*-------------*/
+
+/* section.description */
+
+section.description{
+    padding: 50px 2% 425px 2%;
+    background-color: white;
+    text-align: center;
+}
+
+section.description .container{
+    max-width: 1000px;
+    position: relative;
+    height: auto;
+}
+
+section.description .container h2{
+    color: #472663;
+    font-weight: 100;
+    font-size: 30px;
+}
+
+section.description .container p{
+    margin-top: 30px;
+    max-width: 900px;
+    display: inline-block;
+}
+
+section.description .container img{
+    width: 100%;
+    position: absolute;
+    top: 450px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 768px){
+
+    section.description{
+        padding: 50px 2%;
+    }
+
+    section.description .container img{
+        margin-top: 50px;
+        position: static;
+        transform: translate(0, 0);
+    }
+}
+
+/*-------------*/
+
+/* section.about */
+
+section.about{
+    width: 100%;
+}
+
+section.about .team{
+    padding: 160px 0 90px 0;
+    float: left;
+    width: 50%;
+    background-color: #835FA7;
+}
+
+section.about .team .team-about{
+    margin: 0 auto;
+    text-align: center;
+    max-width: 600px;
+    color: white;
+}
+
+section.about .team .team-about .team-title{
+    width: 100%;
+}
+
+section.about .team .team-about .team-title .team-title-text{
+    text-align: center;
+    padding: 0 2%;
+}
+
+section.about .team .team-about .team-title .team-title-text h2{
+    font-weight: lighter;
+    font-style: italic;
+    font-size: 23px;
+}
+
+section.about .team .team-about .team-title .team-title-text p{
+    font-size: 15px;
+}
+
+section.about .team .team-about .team-title .team-img{
+    margin: 10px auto;
+    width: 50px;
+    height: 50px;
+    background-image: url("../images/icons/icons8-team-96.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+section.about .team .team-about .team-text{
+    width: 100%;
+    padding: 0 2%;
+}
+
+section.about .team .team-about .team-text p{
+    font-size: 15px;
+    line-height: 35px;
+}
+
+section.about .team .team-meeting{
+    text-align: center;
+    margin: 8px;
+}
+
+section.about .team .team-meeting p a{
+    font-style: italic;
+    color: white;
+    text-decoration: underline;
+    font-size: 15px;
+}
+
+section.about .author{
+    padding: 160px 0 90px 0;
+    float: right;
+    width: 50%;
+}
+
+section.about .author .author-about{
+    margin: 0 auto;
+    text-align: center;
+    max-width: 600px;
+}
+
+section.about .author .author-about .author-title{
+    width: 100%;
+    padding: 0 2%;
+}
+
+section.about .author .author-about .author-title .author-title-text{
+    text-align: center;
+}
+
+section.about .author .author-about .author-title .author-title-text h2{
+    font-weight: lighter;
+    font-style: italic;
+    font-size: 23px;
+}
+
+section.about .author .author-about .author-title .author-title-text p{
+    font-size: 15px;
+}
+
+section.about .author .author-about .author-title .author-img{
+    margin: 10px auto;
+    width: 50px;
+    height: 50px;
+    background-image: url("../images/actor1.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border-radius: 25px;
+}
+
+section.about .author .author-about .author-text{
+    width: 100%;
+    padding: 0 2%;
+}
+
+section.about .author .author-about .author-text p{
+    font-size: 15px;
+    line-height: 35px;
+}
+
+section.about .author .author-slider-bullets{
+    text-align: center;
+    margin: 8px;
+}
+
+section.about .author .author-slider-bullets span{
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    margin-right: 8px;
+    display: inline-block;
+    cursor: pointer;
+    background-color: #C8C8C8;
+}
+
+section.about .author .author-slider-bullets span:nth-of-type(1){
+    background-color: black;
+}
+
+@media screen and (max-width: 992px){
+
+    section.about .author, section.about .team{
+        padding: 15% 0 90px 0;
+    }
+
+}
+
+@media screen and (max-width: 768px){
+
+    section.about .author, section.about .team{
+        padding: 25px 2%;
+        float: none;
+        width: 100%;
+    }
+
+}
+/*-------------*/
+
+/* section.contact */
+
+section.contact{
+    background-color: #472663;
+    padding: 50px 0;
+}
+
+section.contact .container .form{
+    float: left;
+    width: 50%;
+    color: white;
+    padding-left: 25px;
+}
+
+section.contact .container .form h2{
+    font-size: 30px;
+    font-weight: lighter;
+}
+
+section.contact .container .form p{
+    margin: 15px 0;
+    font-size: 15px;
+    font-weight: normal;
+    max-width: 480px;
+    line-height: 35px;
+}
+
+section.contact .container .form form input[type="text"], section.contact .form form input[type="email"]{
+    width: 100%;
+    max-width: 480px;
+    padding-left: 8px;
+    height: 58px;
+    line-height: 58px;
+    margin-top: 10px;
+    border: 1px solid rgb(200, 200, 200);
+}
+
+section.contact .container .form form textarea{
+    display: inline-block;
+    width: 100%;
+    max-width: 480px;
+    padding: 8px;
+    margin-top: 10px;
+    border: 1px solid #C8C8C8;
+    height: 160px;
+}
+
+section.contact .container .form form input[type="text"]:focus, section.contact .form form input[type="email"]:focus, section.contact .container .form form textarea:focus{
+    outline: none;
+}
+
+section.contact .container .form form input[type="submit"]{
+    display: inline-block;
+    font-weight: bold;
+    background-color: #FF703D;
+    color: white;
+    width: 165px;
+    height: 50px;
+    margin-top: 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 30px;
+    line-height: 44px;
+}
+
+section.contact .container .location{
+    float: left;
+    width: 50%;
+    color: white;
+    padding-left: 100px;
+    padding-right: 25px;
+}
+
+section.contact .container .location h2{
+    font-size: 30px;
+    font-weight: lighter;
+}
+
+section.contact .container .location .map{
+    width: 100%;
+    max-width: 480px;
+    height: 480px;
+    margin-top: 15px;
+    background-color: white;
+    border: 5px solid #C8C8C8;
+}
+
+section.contact .container .location .map iframe{
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+@media screen and (max-width: 1200px){
+
+    section.contact{
+        padding: 20px 0;
+    }
+
+    section.contact .container .form, section.contact .container .location{
+        text-align: center;
+    }
+
+    section.contact .container .form p{
+        margin: 10px auto;
+    }
+
+}
+
+@media screen and (max-width: 992px){
+
+    section.contact{
+        padding: 20px 2%;
+    }
+
+    section.contact .container .form, section.contact .container .location{
+        float: none;
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+        margin-top: 20px;
+    }
+
+    section.contact .container .form form input[type="submit"]{
+        display: block;
+        margin: 20px auto;
+    }
+
+    section.contact .container .location .map{
+        margin: 10px auto;
+    }
+
+}
+
+/*-------------*/
+
+/* footer */
+
+footer{
+    background-color: #192123;
+    padding: 25px 2%;
+}
+
+footer .container .footer-contact{
+    float: left;
+}
+
+footer .container .footer-text{
+    float: right;
+}
+
+footer .container div p{
+    color: white;
+    font-size: 15px;
+}
+
+@media screen and (max-width: 768px){
+
+    footer{
+        padding: 25px 2%;
+    }
+
+    footer .container div{
+        float: none;
+        margin: 10px auto;
+        width: 100%;
+        text-align: center;
+    }
+
+}
+
+/*-------------*/
