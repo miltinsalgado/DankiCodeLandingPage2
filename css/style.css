@@ -87,7 +87,7 @@ header .container nav.dektop-menu ul{
 }
 
 header .container nav.dektop-menu ul li{
-    display: inline-block;
+    float: left;
     margin: 10px 15px;
 }
 
