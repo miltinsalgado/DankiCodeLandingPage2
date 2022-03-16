@@ -7,6 +7,7 @@
 
 html, body{
     height: 100%;
+    scroll-behavior: smooth;
 }
 
 /* fonts */
@@ -96,7 +97,7 @@ header .container nav.dektop-menu ul li a{
     text-decoration: none;
 }
 
-header .container nav.dektop-menu ul li:nth-child(1) a{
+header .container nav.dektop-menu ul li a:hover{
     font-weight: bold;
 }
 
@@ -507,7 +508,7 @@ section.about .author .author-slider-bullets span:nth-of-type(1){
 @media screen and (max-width: 992px){
 
     section.about .author, section.about .team{
-        padding: 15% 0 90px 0;
+        padding: 13.75% 0 90px 0;
     }
 
 }
