@@ -82,22 +82,22 @@ header .container nav{
     float: right;
 }
 
-header .container nav.dektop-menu ul{
+header .container nav.desktop-menu ul{
     list-style-type: none;
     list-style-position: inside;
 }
 
-header .container nav.dektop-menu ul li{
+header .container nav.desktop-menu ul li{
     float: left;
     margin: 10px 15px;
 }
 
-header .container nav.dektop-menu ul li a{
+header .container nav.desktop-menu ul li a{
     color: white;
     text-decoration: none;
 }
 
-header .container nav.dektop-menu ul li a:hover{
+header .container nav.desktop-menu ul li a:hover{
     font-weight: bold;
 }
 
@@ -149,7 +149,7 @@ header .container .header-text p{
 
 @media screen and (max-width: 768px){
 
-    header .container nav.dektop-menu{
+    header .container nav.desktop-menu{
         display: none;
     }
 
@@ -189,9 +189,11 @@ header .container .header-text p{
     }
 
     @media screen and (max-width: 600px){
+
         header{
             height: 500px;
         }
+        
     }
 }
 
