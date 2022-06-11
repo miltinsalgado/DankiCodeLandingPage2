@@ -1,9 +1,11 @@
 ## 🖥️ Danki Code Landing Page 2 🖥️
 
+<hr>
+
 ### 📄 Resumo do Projeto 📄
 Fiz mais uma landing page, seguindo o tutorial da Danki Code e as dicas do professor Guilherme Grillo, semelhante à primeira página da Danki criada porém muito mais atualizada e organizada.
 
-##
+<hr>
 
 ### 🖼️ Prévia do Projeto 🖼️
 
