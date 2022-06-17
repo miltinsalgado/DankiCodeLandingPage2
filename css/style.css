@@ -95,10 +95,11 @@ header .container nav.desktop-menu ul li{
 header .container nav.desktop-menu ul li a{
     color: white;
     text-decoration: none;
+    transition: text-shadow 1s;
 }
 
 header .container nav.desktop-menu ul li a:hover{
-    font-weight: bold;
+    text-shadow: 0 0 2px white;
 }
 
 header .container nav.mobile-menu{
